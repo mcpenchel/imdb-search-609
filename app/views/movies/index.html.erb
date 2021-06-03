@@ -12,9 +12,15 @@
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div id="movies">
-        <% @movies.each do |movie| %>
-          <h4><%= movie.title %></h4>
-          <p><%= movie.synopsis %></p>
+        <%# @movies.each do |movie| %>
+          <%# <h4>= movie.title</h4> %>
+          <%# <p>= movie.synopsis</p> %>
+        <%# end %>
+
+        <% @movies.each do |resource| %>
+          <%# Duck Typing %>
+          <h4><%= resource.searchable.title %></h4>
+          <p><%= resource.searchable.synopsis %></p>
         <% end %>
       </div>
     </div>
